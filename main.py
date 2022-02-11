@@ -182,7 +182,7 @@ def unPark(vtype,slotNumber,levelNumber):
     data=loads(adminfile)
     if levelNumber not in range(1,len(data[0]["lotDetails"])+1):
         return ("Wrong level number entered")
-    if slotNumber not in range(1,len(data[0]["lotDetails"][levelNumber-1][spotList[vtype-1]])+1):
+    if slotNumber not in range(1,len(data[0]["lotDetails"][levelNumber-1][spotList[vtype-1]])):
         return ("Wrong slot number entered")
     if (len(data[0]["lotDetails"][levelNumber-1][spotList[vtype-1]][slotNumber])) == 0 :
         return("Please check your slot number and level number\nNo car found at the location you mentioned")
